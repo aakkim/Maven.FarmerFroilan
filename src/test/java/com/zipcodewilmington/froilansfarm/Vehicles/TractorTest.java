@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
 import com.zipcodewilmington.froilansfarm.Animals.Farmer;
+import com.zipcodewilmington.froilansfarm.Animals.Pilot;
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Food.Corn;
@@ -74,6 +75,13 @@ public class TractorTest {
         Farmer farmer = new Farmer();
 
         Assert.assertTrue(tractor.rider(farmer));
+    }
+
+    @Test
+    public void testRider2() {
+        Pilot pilot = new Pilot();
+
+        Assert.assertFalse(tractor.rider(pilot));
     }
 
     @Test
