@@ -56,6 +56,13 @@ public class CropDusterTest {
     }
 
     @Test
+    public void testRider2() {
+        Farmer farmer = new Farmer();
+
+        Assert.assertFalse(cropDuster.rider(farmer));
+    }
+
+    @Test
     public void testMakeNoise() {
         String expected = "roar roar roar";
         String actual = cropDuster.makeNoise();
