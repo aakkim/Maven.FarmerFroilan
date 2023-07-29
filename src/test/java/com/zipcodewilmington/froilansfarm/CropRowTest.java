@@ -35,10 +35,10 @@ public class CropRowTest {
 
     @Test
     public void testCropsList2() {
-        cropRow.add(new Corn());
-        cropRow.add(new Tomato());
-        cropRow.add(new Tomato());
-        cropRow.add(new Tomato());
+        cropRow.add(new CornStalk());
+        cropRow.add(new TomatoPlant());
+        cropRow.add(new TomatoPlant());
+        cropRow.add(new TomatoPlant());
         int expected = 3;
 
         int actual = cropRow.size();
