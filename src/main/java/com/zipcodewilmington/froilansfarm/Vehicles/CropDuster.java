@@ -5,11 +5,12 @@ import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
 public class CropDuster implements Aircraft, FarmVehicle<Pilot> {
 
-    public boolean fly() {
-        return true;
+    public boolean fly(Rider rider) {
+        return rider instanceof Pilot;
     }
 
     public boolean operate(Farm farm) {
