@@ -1,10 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.zipcodewilmington.froilansfarm.Animals.Pilot;
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,6 +31,13 @@ public class CropDusterTest {
     public void testImplementation() {
 
         Assert.assertTrue(cropDuster instanceof Aircraft);
+    }
+
+    @Test
+    public void testFly() {
+        Pilot pilot = new Pilot();
+
+        Assert.assertTrue(cropDuster.fly(pilot));
     }
 
     @Test
