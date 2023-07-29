@@ -50,6 +50,14 @@ public class FieldTest {
     }
 
     @Test
+    public void testCropRowsList3() {
+        int expected = 0;
+        int actual = field.size();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testCropsInList() {
         Corn corn = new Corn();
         CropRow cropRow = new CropRow();
