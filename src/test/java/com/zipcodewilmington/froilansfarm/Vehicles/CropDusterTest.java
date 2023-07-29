@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.zipcodewilmington.froilansfarm.Animals.Farmer;
 import com.zipcodewilmington.froilansfarm.Animals.Pilot;
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
@@ -38,6 +39,13 @@ public class CropDusterTest {
         Pilot pilot = new Pilot();
 
         Assert.assertTrue(cropDuster.fly(pilot));
+    }
+
+    @Test
+    public void testFly2() {
+        Farmer farmer = new Farmer();
+
+        Assert.assertFalse(cropDuster.fly(farmer));
     }
 
     @Test
