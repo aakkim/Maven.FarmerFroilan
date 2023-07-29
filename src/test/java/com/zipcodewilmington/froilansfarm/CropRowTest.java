@@ -51,7 +51,6 @@ public class CropRowTest {
     @Test
     public void testCropsListNull() {
         int expected = 0;
-
         int actual = cropRow.size();
 
         Assert.assertEquals(expected, actual);
@@ -67,6 +66,12 @@ public class CropRowTest {
     public void testFertilize2() {
         Egg egg = new Egg();
         Assert.assertFalse(cropRow.fertilize(egg));
+    }
+
+    @Test
+    public void testFertilize3() {
+        Tomato tomato = new Tomato();
+        Assert.assertTrue(cropRow.fertilize(tomato));
     }
 
 }
