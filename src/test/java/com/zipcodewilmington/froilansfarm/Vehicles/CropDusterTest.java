@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Vehicles;
 
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 import org.junit.Assert;
@@ -22,6 +23,12 @@ public class CropDusterTest {
     public void testInheritance2() {
 
         Assert.assertFalse(cropDuster instanceof Produce);
+    }
+
+    @Test
+    public void testImplementation() {
+
+        Assert.assertTrue(cropDuster instanceof Aircraft);
     }
 
     @Test
