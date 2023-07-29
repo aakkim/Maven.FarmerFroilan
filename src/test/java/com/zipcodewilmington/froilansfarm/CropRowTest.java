@@ -56,20 +56,14 @@ public class CropRowTest {
 
     @Test
     public void testFertilize() {
-        Corn corn = new Corn();
-        Assert.assertTrue(cropRow.fertilize(corn));
+        CornStalk cornStalk = new CornStalk();
+        Assert.assertTrue(cropRow.fertilize(cornStalk));
     }
 
     @Test
     public void testFertilize2() {
-        Egg egg = new Egg();
-        Assert.assertFalse(cropRow.fertilize(egg));
-    }
-
-    @Test
-    public void testFertilize3() {
-        Tomato tomato = new Tomato();
-        Assert.assertTrue(cropRow.fertilize(tomato));
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        Assert.assertTrue(cropRow.fertilize(tomatoPlant));
     }
 
 }
