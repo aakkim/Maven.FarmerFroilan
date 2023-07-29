@@ -8,7 +8,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import java.util.ArrayList;
 
 public class CropRow <CropType extends Crop>extends ArrayList<CropType> {
-    ArrayList crops;
+    ArrayList<CropType> crops;
 
     public CropRow() {
         crops = new ArrayList();
