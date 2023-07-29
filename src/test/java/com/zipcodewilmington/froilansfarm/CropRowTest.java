@@ -49,6 +49,15 @@ public class CropRowTest {
     }
 
     @Test
+    public void testCropsListNull() {
+        int expected = 0;
+
+        int actual = cropRow.size();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testFertilize() {
         Corn corn = new Corn();
         Assert.assertTrue(cropRow.fertilize(corn));
