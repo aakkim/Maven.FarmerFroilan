@@ -10,11 +10,16 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 public class CropDuster implements Aircraft, FarmVehicle<Pilot> {
 
     public boolean fly(Rider rider) {
-        return rider instanceof Pilot;
+        return rider(rider);
     }
 
     public boolean operate(Farm farm) {
         return true;
+    }
+
+    @Override
+    public boolean rider(Rider rider) {
+        return rider instanceof Pilot;
     }
 
     public boolean fertilize(CropRow cropRow) {

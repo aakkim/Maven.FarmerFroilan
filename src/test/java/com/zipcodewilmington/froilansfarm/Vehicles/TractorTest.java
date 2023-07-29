@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.zipcodewilmington.froilansfarm.Animals.Farmer;
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Food.Corn;
@@ -66,6 +67,13 @@ public class TractorTest {
         ArrayList<Edible> actual = tractor.harvest(cropRow);
 
         Assert.assertNotEquals(expected, actual);
+    }
+
+    @Test
+    public void testRider() {
+        Farmer farmer = new Farmer();
+
+        Assert.assertTrue();
     }
 
     @Test

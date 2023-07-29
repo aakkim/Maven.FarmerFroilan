@@ -6,4 +6,6 @@ public interface FarmVehicle <RiderType extends Rider> {
 
     boolean operate(Farm farm);
 
+    boolean rider(Rider rider);
+
 }
