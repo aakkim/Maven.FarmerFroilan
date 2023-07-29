@@ -1,9 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 
-import com.zipcodewilmington.froilansfarm.Food.Corn;
-import com.zipcodewilmington.froilansfarm.Food.Egg;
-import com.zipcodewilmington.froilansfarm.Food.Tomato;
+import com.zipcodewilmington.froilansfarm.Food.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,8 +24,8 @@ public class CropRowTest {
 
     @Test
     public void testCropsList() {
-        cropRow.add(new Corn());
-        cropRow.add(new Tomato());
+        cropRow.add(new CornStalk());
+        cropRow.add(new TomatoPlant());
         int expected = 2;
 
         int actual = cropRow.size();
