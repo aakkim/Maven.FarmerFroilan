@@ -69,12 +69,12 @@ public class TractorTest {
         Assert.assertNotEquals(expected, actual);
     }
 
-//    @Test
-//    public void testRider() {
-//        Farmer farmer = new Farmer();
-//
-//        Assert.assertTrue();
-//    }
+    @Test
+    public void testRider() {
+        Farmer farmer = new Farmer();
+
+        Assert.assertTrue(tractor.rider(farmer));
+    }
 
     @Test
     public void testMakeNoise() {
