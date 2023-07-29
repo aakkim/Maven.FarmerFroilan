@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.Vehicles;
 import com.zipcodewilmington.froilansfarm.Animals.Farmer;
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.Food.Corn;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.Vehicle;
@@ -17,7 +18,8 @@ public class Tractor implements FarmVehicle<Farmer>, Vehicle {
     }
 
     public ArrayList<Edible> harvest(CropRow cropRow){
-        return null;
+
+        return cropRow;
     }
 
 //    @Override

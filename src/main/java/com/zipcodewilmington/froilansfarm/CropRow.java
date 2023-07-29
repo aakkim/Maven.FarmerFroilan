@@ -5,5 +5,8 @@ import com.zipcodewilmington.froilansfarm.Food.Crop;
 import java.util.ArrayList;
 
 public class CropRow <CropType extends Crop>extends ArrayList<CropType> {
-
+    ArrayList crops;
+    public CropRow() {
+        crops = new ArrayList();
+    }
 }
