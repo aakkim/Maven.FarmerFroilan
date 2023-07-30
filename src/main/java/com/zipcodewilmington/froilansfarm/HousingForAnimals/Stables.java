@@ -5,5 +5,9 @@ import com.zipcodewilmington.froilansfarm.Housing;
 
 public class Stables extends Housing<Horse> {
 
+    public Stables() {
+        super();
+    }
+
 
 }
