@@ -19,11 +19,18 @@ public class CropDuster implements Aircraft, FarmVehicle<Pilot> {
     }
 
 
-    public boolean fertilize(CropRow cropRow) {
-        for(Object c: cropRow) {
-            if(c instanceof Crop) {
-                ((Crop<?>) c).isFertilized = true;
-            }
+//    public boolean fertilize(CropRow cropRow) {
+//        for(Object c: cropRow) {
+//            if(c instanceof Crop) {
+//                ((Crop<?>) c).isFertilized = true;
+//            }
+//        }
+//        return true;
+//    }
+
+    public <CropType extends Crop> boolean fertilize(CropRow<CropType> cropRow) {
+        for(CropType c: cropRow) {
+            c.isFertilized = true;
         }
         return true;
     }
