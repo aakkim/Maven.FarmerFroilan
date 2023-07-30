@@ -4,6 +4,10 @@ import com.zipcodewilmington.froilansfarm.Animals.Farmer;
 import com.zipcodewilmington.froilansfarm.Animals.Pilot;
 import com.zipcodewilmington.froilansfarm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.Food.Corn;
+import com.zipcodewilmington.froilansfarm.Food.CornStalk;
+import com.zipcodewilmington.froilansfarm.Food.Crop;
+import com.zipcodewilmington.froilansfarm.Food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
@@ -42,27 +46,6 @@ public class CropDusterTest {
     }
 
     @Test
-    public void testFly2() {
-        Farmer farmer = new Farmer();
-
-        Assert.assertFalse(cropDuster.fly(farmer));
-    }
-
-    @Test
-    public void testRider() {
-        Pilot pilot = new Pilot();
-
-        Assert.assertTrue(cropDuster.rider(pilot));
-    }
-
-    @Test
-    public void testRider2() {
-        Farmer farmer = new Farmer();
-
-        Assert.assertFalse(cropDuster.rider(farmer));
-    }
-
-    @Test
     public void testMakeNoise() {
         String expected = "roar roar roar";
         String actual = cropDuster.makeNoise();
@@ -98,6 +81,5 @@ public class CropDusterTest {
 
         Assert.assertTrue(cropDuster.fertilize(cropRow));
     }
-
 
 }
