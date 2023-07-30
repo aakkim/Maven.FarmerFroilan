@@ -22,7 +22,7 @@ public class CropDuster implements Aircraft, FarmVehicle<Pilot> {
     public boolean fertilize(CropRow cropRow) {
         for(Object c: cropRow) {
             if(c instanceof Crop) {
-                c.isFertilized = true;
+                ((Crop<?>) c).isFertilized = true;
             }
         }
         return true;
