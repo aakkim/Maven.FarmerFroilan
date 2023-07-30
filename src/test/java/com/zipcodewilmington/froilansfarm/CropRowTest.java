@@ -67,7 +67,6 @@ public class CropRowTest {
 
         Assert.assertEquals(expected, actual);
     }
-    
 
     @Test
     void idkWhatImTestingHere() {
