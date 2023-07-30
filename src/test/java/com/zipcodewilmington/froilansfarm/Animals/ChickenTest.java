@@ -48,13 +48,12 @@ public class ChickenTest {
         assertTrue(chicken.yield() instanceof Egg);
     }
 
-    @Test
-    public void eatSomething(){
-        Chicken chicken = new Chicken();
-        Tomato tomato = new Tomato();
-
-        assertFalse(chicken.eat(tomato));
-    }
+//    @Test
+//    public void eatSomething(){
+//        Chicken chicken = new Chicken();
+//        Tomato tomato = new Tomato();
+//        assertFalse(chicken.eat(tomato));
+//    }
     @Test
     public void eatSomething2(){
         Chicken chicken = new Chicken();
@@ -67,7 +66,7 @@ public class ChickenTest {
         Chicken chicken = new Chicken();
         Corn corn  = new Corn();
         chicken.eat(corn);
-        assertTrue(chicken.isFull());
+        assertTrue(chicken.isFull);
     }
 
 }

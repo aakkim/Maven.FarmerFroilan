@@ -39,4 +39,9 @@ public class CropDuster implements Aircraft, FarmVehicle<Pilot> {
     public String makeNoise() {
         return "roar roar roar";
     }
+
+    @Override
+    public boolean ride(Pilot rider) {
+        return rider!=null;
+    }
 }
