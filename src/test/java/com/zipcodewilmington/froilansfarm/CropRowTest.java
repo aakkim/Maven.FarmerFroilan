@@ -1,18 +1,17 @@
 package com.zipcodewilmington.froilansfarm;
 
-<<<<<<< HEAD
 
 import com.zipcodewilmington.froilansfarm.Food.*;
 import org.junit.Assert;
 import org.junit.Test;
-=======
+
 import com.zipcodewilmington.froilansfarm.Food.Corn;
 import com.zipcodewilmington.froilansfarm.Food.CornStalk;
 import com.zipcodewilmington.froilansfarm.Food.Crop;
 import com.zipcodewilmington.froilansfarm.Food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-import org.junit.jupiter.api.Test;
->>>>>>> upstream/master
+//import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
