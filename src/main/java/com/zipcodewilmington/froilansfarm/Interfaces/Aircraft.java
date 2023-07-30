@@ -4,5 +4,5 @@ import com.zipcodewilmington.froilansfarm.Animals.Pilot;
 
 public interface Aircraft extends Vehicle<Pilot> {
 
-    boolean fly(Rider rider);
+    boolean fly(Pilot pilot);
 }

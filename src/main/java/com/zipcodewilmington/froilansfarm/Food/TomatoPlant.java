@@ -7,13 +7,4 @@ public class TomatoPlant extends Crop<Tomato>{
         return new Tomato();
     }
 
-    @Override
-    boolean hasBeenFertilized() {
-        return false;
-    }
-
-    @Override
-    boolean hasBeenHarvested() {
-        return false;
-    }
 }

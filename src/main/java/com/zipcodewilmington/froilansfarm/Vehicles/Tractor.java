@@ -18,17 +18,12 @@ public class Tractor implements FarmVehicle<Farmer>, Vehicle {
         return true;
     }
 
-    @Override
-    public boolean rider(Rider rider) {
-        return rider instanceof Farmer;
-    }
-
     public ArrayList<Edible> harvest(CropRow cropRow){
 
         return cropRow;
     }
 
-//    @Override
+    @Override
     public String makeNoise() {
         return "rumble rumble rumble";
     }
