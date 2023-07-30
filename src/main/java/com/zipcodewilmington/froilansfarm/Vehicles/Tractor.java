@@ -12,7 +12,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Vehicle;
 import java.util.ArrayList;
 
 
-public class Tractor implements FarmVehicle<Farmer>, Vehicle {
+public class Tractor implements FarmVehicle<Farmer> {
 
     public boolean operate(Farm farm) {
         return true;
@@ -26,5 +26,11 @@ public class Tractor implements FarmVehicle<Farmer>, Vehicle {
     @Override
     public String makeNoise() {
         return "rumble rumble rumble";
+    }
+
+
+    @Override
+    public boolean ride(Farmer rider) {
+        return rider!=null;
     }
 }

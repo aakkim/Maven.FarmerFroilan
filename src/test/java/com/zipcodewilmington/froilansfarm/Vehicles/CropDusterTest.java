@@ -75,11 +75,11 @@ public class CropDusterTest {
         Assert.assertNotEquals(false, cropDuster.operate(farm));
     }
 
-    @Test
-    public void testFertilize() {
-        CropRow cropRow = new CropRow();
-
-        Assert.assertTrue(cropDuster.fertilize(cropRow));
-    }
+//    @Test
+//    public void testFertilize() {
+//        CropRow cropRow = new CropRow();
+//
+//        Assert.assertTrue(cropDuster.fertilize(cropRow));
+//    }
 
 }

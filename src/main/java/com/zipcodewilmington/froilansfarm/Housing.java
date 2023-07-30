@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 public abstract class Housing <AnimalType extends Animal> extends ArrayList<AnimalType> {
 
+
     public Housing() {
         super();
     }
+
 }
