@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.sun.source.tree.AssertTree;
 import com.zipcodewilmington.froilansfarm.Animals.Farmer;
 import com.zipcodewilmington.froilansfarm.Animals.Pilot;
 import com.zipcodewilmington.froilansfarm.CropRow;
@@ -75,11 +76,24 @@ public class CropDusterTest {
         Assert.assertNotEquals(false, cropDuster.operate(farm));
     }
 
-//    @Test
-//    public void testFertilize() {
-//        CropRow cropRow = new CropRow();
-//
-//        Assert.assertTrue(cropDuster.fertilize(cropRow));
-//    }
+    @Test
+    public void testFertilize() {
+        CropRow cropRow = new CropRow();
+
+        Assert.assertTrue(cropDuster.fertilize(cropRow));
+    }
+
+    @Test
+    public void testFertilize2() {
+        CropRow<Crop> cropRow = new CropRow<>();
+        cropRow.add(new CornStalk());
+        cropRow.add(new TomatoPlant());
+
+        cropDuster.fertilize(cropRow);
+        for (Crop c: cropRow) {
+            Assert.assertTrue(c.isFertilized);
+        }
+
+    }
 
 }
