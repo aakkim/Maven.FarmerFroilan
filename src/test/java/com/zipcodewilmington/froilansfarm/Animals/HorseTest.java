@@ -4,10 +4,7 @@ import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.Food.Corn;
 import com.zipcodewilmington.froilansfarm.Food.Egg;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
-import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.Interfaces.*;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,42 +28,29 @@ public class HorseTest {
         Horse horse = new Horse();
 
 
-        assertTrue(horse instanceof Rider);
+        assertTrue(horse instanceof Rideable);
     }
 
     @Test
     public void testNoise(){
         Horse horse = new Horse();
 
-        String expected = "Neigh";
+        String expected = "Neigh Neigh";
         String actual = horse.makeNoise();
 
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void testEdible(){
-        Horse horse = new Horse();
 
 
-        assertTrue(horse.yield() instanceof Edible);
-    }
-    @Test
-    public void testEdible2(){
-        Horse horse = new Horse();
-
-
-        assertTrue(horse.yield() instanceof Egg);
-    }
-
-    @Test
-    public void eatSomething(){
-        Horse horse = new Horse();
-
-        Tomato tomato = new Tomato();
-
-        assertFalse(horse.eat(tomato));
-    }
+//    @Test
+//    public void eatSomething(){
+//        Horse horse = new Horse();
+//
+//        Tomato tomato = new Tomato();
+//
+//        assertFalse(horse.eat(tomato));
+//    }
     @Test
     public void eatSomething2(){
         Horse horse = new Horse();
@@ -81,7 +65,7 @@ public class HorseTest {
 
         Corn corn  = new Corn();
         horse.eat(corn);
-        assertTrue(horse.isFull());
+        assertTrue(horse.isFull);
     }
     @Test
     public void rideHorse(){

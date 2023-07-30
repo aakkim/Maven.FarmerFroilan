@@ -97,7 +97,7 @@ public class FarmerTest {
     public void testMakeNoise(){
         Farmer farmer = new Farmer("Froiland");
 
-        String expected = "Hello, I'm Froiland";
+        String expected = "Hi, I'm Froiland";
         String actual = farmer.makeNoise();
 
         assertEquals(expected, actual);

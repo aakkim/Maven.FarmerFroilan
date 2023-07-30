@@ -19,17 +19,22 @@ public class CropDuster implements Aircraft, FarmVehicle<Pilot> {
     }
 
 
-    public boolean fertilize(CropRow cropRow) {
-        for(Object c: cropRow) {
-            if(c instanceof Crop) {
-                c.isFertilized = true;
-            }
-        }
-        return true;
-    }
+//    public boolean fertilize(CropRow cropRow) {
+//        for(Object c: cropRow) {
+//            if(c instanceof Crop) {
+//                c.isFertilized = true;
+//            }
+//        }
+//        return true;
+//    }
 
     @Override
     public String makeNoise() {
         return "roar roar roar";
+    }
+
+    @Override
+    public boolean ride(Pilot rider) {
+        return rider!=null;
     }
 }
