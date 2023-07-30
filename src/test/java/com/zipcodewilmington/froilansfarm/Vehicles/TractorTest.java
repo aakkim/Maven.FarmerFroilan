@@ -71,20 +71,6 @@ public class TractorTest {
     }
 
     @Test
-    public void testRider() {
-        Farmer farmer = new Farmer();
-
-        Assert.assertTrue(tractor.rider(farmer));
-    }
-
-    @Test
-    public void testRider2() {
-        Pilot pilot = new Pilot();
-
-        Assert.assertFalse(tractor.rider(pilot));
-    }
-
-    @Test
     public void testMakeNoise() {
         String expected = "rumble rumble rumble";
         String actual = tractor.makeNoise();

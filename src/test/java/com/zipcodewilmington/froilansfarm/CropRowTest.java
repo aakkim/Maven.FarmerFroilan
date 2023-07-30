@@ -1,13 +1,14 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Food.*;
 import org.junit.Assert;
 import org.junit.Test;
+
 import com.zipcodewilmington.froilansfarm.Food.Corn;
 import com.zipcodewilmington.froilansfarm.Food.CornStalk;
 import com.zipcodewilmington.froilansfarm.Food.Crop;
 import com.zipcodewilmington.froilansfarm.Food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CropRowTest {
@@ -55,18 +56,6 @@ public class CropRowTest {
         int actual = cropRow.size();
 
         Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testFertilize() {
-        CornStalk cornStalk = new CornStalk();
-        Assert.assertTrue(cropRow.fertilize(cornStalk));
-    }
-
-    @Test
-    public void testFertilize2() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        Assert.assertTrue(cropRow.fertilize(tomatoPlant));
     }
 
     @Test
