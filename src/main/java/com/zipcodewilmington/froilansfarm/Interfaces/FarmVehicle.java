@@ -1,4 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface FarmVehicle <RiderType extends Rider>{
+import com.zipcodewilmington.froilansfarm.Farm;
+
+public interface FarmVehicle <RiderType extends Rider> {
+
+    boolean operate(Farm farm);
+
+    boolean rider(Rider rider);
+
 }
