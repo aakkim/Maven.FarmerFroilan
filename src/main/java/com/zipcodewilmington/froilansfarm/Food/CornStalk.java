@@ -9,13 +9,4 @@ public class CornStalk extends Crop<Corn>{
         return new Corn();
     }
 
-    @Override
-    boolean hasBeenFertilized() {
-        return false;
-    }
-
-    @Override
-    boolean hasBeenHarvested() {
-        return false;
-    }
 }
