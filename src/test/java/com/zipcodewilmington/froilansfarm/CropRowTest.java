@@ -69,7 +69,7 @@ public class CropRowTest {
     }
 
     @Test
-    void idkWhatImTestingHere() {
+    public void idkWhatImTestingHere() {
         CropRow<Crop> crop = new CropRow<>();
 
         CornStalk earCorn = new CornStalk();
