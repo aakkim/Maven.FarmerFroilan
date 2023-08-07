@@ -20,10 +20,13 @@ public class Farmer extends Person implements Rider<Tractor>, Botanist<Crop> {
     }
 
     @Override
-    boolean rideHorses(Stables stable) {
+    public boolean rideHorses(Stables stable) {
         for(Horse h: stable){
             if(h.ride(this)){
                 this.mount(h);
+            }
+            else{
+                return false;
             }
         }
         return true;
