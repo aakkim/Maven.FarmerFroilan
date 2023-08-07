@@ -18,30 +18,30 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 import java.util.ArrayList;
 
 public class Farm {
-    ArrayList<Stables> stables = new ArrayList<>();
+    public ArrayList<Stables> stables = new ArrayList<>();
     ArrayList<ChickenCoop> chickenCoops= new ArrayList<>();
     Field field = new Field();
-    FarmHouse farmHouse = new FarmHouse();
+    public FarmHouse farmHouse = new FarmHouse();
     Aircraft aircraft;
     ArrayList<FarmVehicle> farmVehicles= new ArrayList<>();
 
     public void setup(){
         farmHouse.add(new Farmer("Froiland"));
+        farmHouse.add( new Pilot("Froilanda"));
         field.addAll(buildField());
         aircraft = new CropDuster();
-        for(int i = 4; i < 7; i++){
-            chickenCoops.add(buildchickenCoop(i));
+        for(int i = 0; i < 3; i++){
+            chickenCoops.add(buildchickenCoop(4));
         }
+        chickenCoops.add(buildchickenCoop(3));
         stables.add(buildStables(3));
         stables.add(buildStables(4));
         stables.add(buildStables(3));
         farmVehicles.add(new Tractor());
         farmVehicles.add(new Tractor());
-        farmHouse.add( new Pilot("Froilanda"));
-
     }
 
-    private Field buildField(){
+    public Field buildField(){
         Field hold = new Field();
         for(int i = 1; i <=5; i++ ){
             if (i%2 ==0){
@@ -52,16 +52,15 @@ public class Farm {
             }
         }
         return hold;
-
     }
-    private CropRow<CornStalk> buildCornRow(){
+    public CropRow<CornStalk> buildCornRow(){
         CropRow<CornStalk> cs = new CropRow<>();
         for(int i = 0; i < 5; i++){
             cs.add(new CornStalk());
         }
         return cs;
     }
-    private CropRow<TomatoPlant> buildTomatoPlant(){
+    public CropRow<TomatoPlant> buildTomatoPlant(){
         CropRow<TomatoPlant> tp = new CropRow<>();
         for(int i = 0; i < 5; i++){
             tp.add(new TomatoPlant());
@@ -69,14 +68,14 @@ public class Farm {
         return tp;
     }
 
-    private ChickenCoop buildchickenCoop(int numOfChick){
+    public ChickenCoop buildchickenCoop(int numOfChick){
         ChickenCoop cc = new ChickenCoop();
         for(int i = 0; i < numOfChick; i++){
             cc.add(new Chicken());
         }
         return cc;
     }
-    private Stables buildStables(int numOfHorse){
+    public Stables buildStables(int numOfHorse){
         Stables s = new Stables();
         for(int i = 0; i < numOfHorse; i++){
             s.add(new Horse());
