@@ -18,10 +18,10 @@ import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
 import java.util.ArrayList;
 
 public class Farm {
-    ArrayList<Stables> stables = new ArrayList<>();
+    public ArrayList<Stables> stables = new ArrayList<>();
     ArrayList<ChickenCoop> chickenCoops= new ArrayList<>();
     Field field = new Field();
-    FarmHouse farmHouse = new FarmHouse();
+    public FarmHouse farmHouse = new FarmHouse();
     Aircraft aircraft;
     ArrayList<FarmVehicle> farmVehicles= new ArrayList<>();
 
@@ -39,8 +39,6 @@ public class Farm {
         stables.add(buildStables(3));
         farmVehicles.add(new Tractor());
         farmVehicles.add(new Tractor());
-
-
     }
 
     public Field buildField(){
@@ -54,7 +52,6 @@ public class Farm {
             }
         }
         return hold;
-
     }
     public CropRow<CornStalk> buildCornRow(){
         CropRow<CornStalk> cs = new CropRow<>();
