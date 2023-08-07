@@ -95,12 +95,15 @@ public class TuesdayTest {
 
         ArrayList<Edible> holdCrops1 = tractor.harvest(cropRow1);
         Assert.assertEquals(holdCrops1.size(), 3);
+        Assert.assertEquals(cropRow1.size(), 0);
 
+        ArrayList<Edible> holdCrops2 = tractor.harvest(cropRow2);
+        Assert.assertEquals(holdCrops2.size(), 3);
+        Assert.assertEquals(cropRow2.size(), 0);
 
-
-//        Assert.assertEquals(cropRow1, tractor.harvest(cropRow1));
-//        Assert.assertEquals(cropRow2, tractor.harvest(cropRow2));
-//        Assert.assertEquals(cropRow3, tractor.harvest(cropRow3));
+        ArrayList<Edible> holdCrops3 = tractor.harvest(cropRow3);
+        Assert.assertEquals(holdCrops3.size(), 3);
+        Assert.assertEquals(cropRow3.size(), 0);
 
     }
 }

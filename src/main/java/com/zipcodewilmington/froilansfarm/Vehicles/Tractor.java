@@ -29,8 +29,8 @@ public class Tractor implements FarmVehicle<Farmer> {
             }
         }
         cropRow.clear();
-        System.out.println(cropRow.size());
-        System.out.println(holdCrops.size());
+//        System.out.println(cropRow.size());
+//        System.out.println(holdCrops.size());
         return holdCrops;
     }
 
